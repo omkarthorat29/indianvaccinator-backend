@@ -71,7 +71,7 @@ def send_alert(request):
     for newData in mainStringList:
         for user in newData['userDetails']:
             send_email(user, newData)
-            # send_sms(user, newData)
+            send_sms(user, newData)
 
     return Response({"message": 'inside alert sender'})
 

@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-1_3v8pf0$*%@jr4eo0m9-_#cad4_#zcix+4syhs5pf2g(u1&7o
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['8etpnja1q8.execute-api.ap-south-1.amazonaws.com']
 
 
 # Application definition
@@ -74,12 +74,12 @@ WSGI_APPLICATION = 'indianvaccinator.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 
 
 # Password validation

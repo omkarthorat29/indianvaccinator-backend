@@ -1,0 +1,10 @@
+{
+    "dev": {
+        "aws_region": "ap-south-1",
+        "django_settings": "indianvaccinator.settings",
+        "profile_name": "default",
+        "project_name": "indianvaccinato",
+        "runtime": "python3.8",
+        "s3_bucket": "zappa-tqkp77xn9"
+    }
+}
