@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "getmyvaccine-dbaca",
+  "private_key_id": "7b102e4779f02745e362793e6ac654f0b9ec73f6",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDIKpowPkBYkD+h\nv1NRJSU3lED2KTbugRd/cYGMFzHh9h/tyhWGDc4PWx6pH23lKo80b1THiiG30Xop\nPeRPPp/TL1Vy4fFmH3tSabiJrYutVd43OwJ+hbutj/22BW4aj62NgK3FxzlbTX8K\nmM4+QNjd3OdG/Byc6p7ZL6yWcLvy53QdpGm2VXe5FybTRIYqqoYFDNTSeRJecTxX\nRdq85A1+cJjjIAG6csa3z5mlbtSK1Qs/qq+zagd3CpoWheTvGYqvPTaivSUnBq2w\nVC9I6iKaeD+Ma1GEpX10SJJvt8hmWuGoJdmHqlVGQxj3QlFT56dMeSHSBe/q0d6e\nxjHoqx4BAgMBAAECggEARL30w/qtCH1JjRfy2hxCosrEYIWY+uHUmwz1K5JPrEVl\ng7lyGN6m1Lk7V2OWzywFkEFnwTtcBw/mv0ElJl3gb5uC4fhcefD33j62hHnYTUf/\nD8KxQZhV8u5PeHJ29KJBPSZjB1g7B3Me3RnLQq/sio0x1DwC65TbxsTLpcLDmVBu\nHowE1Wpcp5U2lrfkyNT6XGgjl+UMj/ceLNdyNcHPGCOYJVMb0MgxOMwyioeVq4wh\ncz+VvDww1PircDsUDoXlRqzuMHo/CJiUYV77H60637LPJll5+FS4L2C5P7TVoc1H\ndMi+qZlucWYc5fdIs6p0hY0XMg71OBUqFirsmUG3nQKBgQDlKv1naLojP4xo/4zF\nLXi6//3oE1S6xGOhO4dhq6XvW5BAkagwJO/OHoGso1AxYXc3FPI5D5k6GNjbylqq\n6EvuTUW8U1oxteRV00t6iUZs2Ir2P4fyUlfp2uuoT5IJsBF+yz3MjDAAHL3BUMkj\nS06soGZSACAACrJmcmUw2gnE0wKBgQDfmlRwZp3R9Lzjef4Hkb6pKmfWU+Al/6D1\nIszlFhCq/tLUQ6U8A5dmMJO2289PpoIXAkvONlP7BbVZmj9DykryJjoTUrbXbdE4\n7/q4swhmXbweAhht1ltyf7n4sOr1hGxKcRONVjKeG2v/SG3X7mDPocjByzVZSp2V\nxtdJmZjdWwKBgA/xGKWr7F7tWcgoFtPUoPRpQHF3fsprRP7/VCCgPy/Sb8t+FnQa\n7a+qAZ1P0xFMVW24gE0l36Ph/Jv1jK8c78NJDtPV/I0+uP6bb0G78PE7cxdEPiHG\nRqVW/FO+DUutOtpWKxtimSg4155uDz/sSjHKCrQjnBZEqDpmNNHcKRfPAoGACgml\njL4ui4RPDm8lhjV2t6Vdr/Nn9oy5Lwf25rnM2cBCuqCmxEDtBPtdRjIr5kl1QY8q\n1AEAWB5ze6g++s4T+zbYGJH3/0fAwquTN8NhtyayES7K5fNfe45cTNu0UH03V0go\nNooOD6bvfDBGLhFXazq6BmkW5gFBfb3FYFpy0E0CgYBZ7jOiJ7uxAkISJPCjmJTJ\nQsX/YPrptcDZKnwE+GM6LtYaaQ8SR1dmcMyopn/oFGLqwkfHRod053u3VA+Sw/bu\ncbGESzbDE2hZsld1dgm7Kg+vnVJkuqBP2uKWOiASmEAplnPF8M3LIET8Newp/Uj9\nhX1GeAVRldFIylH6Op+3iA==\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-d8srs@getmyvaccine-dbaca.iam.gserviceaccount.com",
+  "client_id": "114830410197266290226",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-d8srs%40getmyvaccine-dbaca.iam.gserviceaccount.com"
+}
