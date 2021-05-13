@@ -13,8 +13,8 @@ from email.mime.text import MIMEText
 sender_address = 'indianvaccinator@gmail.com'
 sender_pass = 'omkar@1998@omkar'
 path = "docs/authkey.json"
-cred = credentials.Certificate(path)
-firebase_admin.initialize_app(cred)
+# cred = credentials.Certificate(path)
+# firebase_admin.initialize_app(cred)
 
 
 @api_view(["GET"])
@@ -28,9 +28,9 @@ def send_alert(request):
     set_list = []
     try:
         for value in listdict:
-            zip = value['pincode']
-            set_list.append(zip)
-            # print(postal_codes)
+            if "pincode" in value and value['pincode']:
+                zip = value['pincode']
+                set_list.append(zip)
     except Exception as e:
         pass
         print(e)
@@ -39,39 +39,44 @@ def send_alert(request):
     mainStringList = []
     data = {}
     for code in postal_codes:
-        url = f"https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/calendarByPin?pincode={code}&date={today_date} "
-        payload = {}
-        headers = {
-            "User-Agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:72.0) Gecko/20100101 Firefox/72.0"}
-        request = urllib.request.Request(url, headers=headers)
-        response = urllib.request.urlopen(request)
-        data = response.read()
-        apiData = json.loads(data)
-        if apiData['centers']:
-            for value in apiData['centers']:
-                centerName = value['name']
-                for session in value['sessions']:
-                    if session['available_capacity'] > 0:
-                        data = {'date': session['date'], 'pincode': code, 'address': value['address'],
-                                'capacity': session['available_capacity'], 'vaccine': session['vaccine'],
-                                'ageLimit': session['min_age_limit'], 'slots': session['slots'],
-                                'centerName': centerName}
-                        mainStringList.append(data)
+        try:
+            url = f"https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/calendarByPin?pincode={code}&date={today_date} "
+            payload = {}
+            headers = {
+                "User-Agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:72.0) Gecko/20100101 Firefox/72.0"}
+            request = urllib.request.Request(url, headers=headers)
+            response = urllib.request.urlopen(request)
+            data = response.read()
+            apiData = json.loads(data)
+            if apiData['centers']:
+                for value in apiData['centers']:
+                    centerName = value['name']
+                    for session in value['sessions']:
+                        if session['available_capacity'] > 0:
+                            data = {'date': session['date'], 'pincode': code, 'address': value['address'],
+                                    'capacity': session['available_capacity'], 'vaccine': session['vaccine'],
+                                    'ageLimit': session['min_age_limit'], 'slots': session['slots'],
+                                    'centerName': centerName}
+                            mainStringList.append(data)
+        except Exception as err:
+            print(url)
+            print(err)
     for newData in mainStringList:
         users = []
         for user in listdict:
-            if user['pincode'] == newData['pincode']:
-                users.append({
-                    'email': user['email'],
-                    'phone': user['phoneNumber'],
-                    'name': user['displayName']
-                })
+            if "pincode" in user:
+                if user['pincode'] == newData['pincode']:
+                    users.append({
+                        'email': user['email'],
+                        'phone': user['phoneNumber'],
+                        'name': user['displayName']
+                    })
         newData['userDetails'] = users
 
     for newData in mainStringList:
         for user in newData['userDetails']:
             send_email(user, newData)
-            send_sms(user, newData)
+            # send_sms(user, newData)
 
     return Response({"message": 'inside alert sender'})
 

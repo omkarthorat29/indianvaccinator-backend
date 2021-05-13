@@ -16,7 +16,17 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from . import views
+from .FirebaseOps import views as firebaseView
+from .Main import view as mainView
+from .Cowin import view as cowinView
+from .Alerts import view as alertView
+from .SendEmail import view as emailView
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('sendalert/',  views.send_alert, name='send_alert')
+    # path('sendalert/',  views.send_alert, name='send_alert'),
+    path('alerts/',  alertView.sendAlerts, name='alertView'),
+    path('sendEmail/',  emailView.sendEmail, name='emailView'),
+    path('cowin/',  cowinView.fetchCenterAndUsers, name='cowinView'),
+    path('main/',  mainView.main, name='mainView'),
+    path('firebase/', firebaseView.getUsersAndUniquePinocdes, name='getUsersAndUniquePinocdes')
 ]
